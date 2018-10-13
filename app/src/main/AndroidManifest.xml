@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ravnia.moniimischief">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/monii"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/monii"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".welcomeScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- next screen, must have declared here to have it go to next screen, softinputmode keeps keyboard from popping up automatically-->
+        <activity android:name= ".main_screen"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+    </application>
+
+</manifest>

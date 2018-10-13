@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical"
+    tools:context=".main_screen">
+
+<!-- constraint to the left of the left and to the right of the right forces to be right in the middle -->
+    <EditText
+        android:id="@+id/original"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textColorHighlight="#CCD1D1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/converted"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textColorHighlight="#CCD1D1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/original" />
+<!--
+    <TextView
+        android:id="@+id/originalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="original currency"
+        android:textSize="30dp"
+        android:textColor="#239B56"
+        app:layout_constraintStart_toEndOf="@id/original"
+        app:layout_constraintBaseline_toBaselineOf="@id/original"
+        tools:layout_editor_absoluteY="100dp" />
+
+
+    <TextView
+        android:id="@+id/convertedLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="converted currency"
+        android:textSize="30dp"
+        android:textColor="#239B56"
+        app:layout_constraintStart_toEndOf="@id/converted"
+        app:layout_constraintBaseline_toBaselineOf="@id/converted"
+        tools:layout_editor_absoluteY="183dp" />
+    -->
+    <!--
+    <Spinner
+        android:id="@+id/originalSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/original"
+        app:layout_constraintBaseline_toBaselineOf="@id/original"
+        tools:layout_editor_absoluteY="100dp"
+        android:popupBackground="#3498DB"/>
+
+    <Spinner
+        android:id="@+id/convertedSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        app:layout_constraintStart_toEndOf="@id/converted"
+        app:layout_constraintBaseline_toBaselineOf="@id/converted"
+        tools:layout_editor_absoluteY="183dp"
+        android:popupBackground="#3498DB"/> -->
+
+
+    <TextView
+        android:id="@+id/disclaimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Disclaimer: We anticipate rates to increase in the near future."
+        android:textColor="#3498DB"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/convert" />
+
+
+    <Button
+        android:id="@+id/convert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/rounded_button"
+        android:text="Convert"
+        android:textColor="#239B56"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/converted" />
+
+    <Spinner
+        android:id="@+id/originalSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/convertedSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.325"
+        app:layout_constraintStart_toEndOf="@+id/original"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.562" />
+
+    <Spinner
+        android:id="@+id/convertedSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="56dp"
+        app:layout_constraintBottom_toTopOf="@+id/convert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.325"
+        app:layout_constraintStart_toEndOf="@+id/converted" />
+</android.support.constraint.ConstraintLayout>
