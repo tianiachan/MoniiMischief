@@ -14,7 +14,7 @@ public class main_screen extends AppCompatActivity implements AdapterView.OnItem
 {
     EditText original, converted;
     TextView originalLabeltxt, convertLabeltxt, anticipatetxt;
-    Spinner currencySelect;
+    Spinner currencySelectO, currencySelectC;
 
     //create screen
     @Override
@@ -29,8 +29,8 @@ public class main_screen extends AppCompatActivity implements AdapterView.OnItem
         //originalLabeltxt = findViewById(R.id.originalLabel);
         //convertLabeltxt = findViewById(R.id.convertedLabel);
         anticipatetxt = findViewById(R.id.disclaimer);
-        currencySelect = findViewById(R.id.originalSpinner);
-        currencySelect = findViewById(R.id.convertedSpinner);
+        currencySelectO = findViewById(R.id.originalSpinner);
+        currencySelectC = findViewById(R.id.convertedSpinner);
 
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -38,8 +38,10 @@ public class main_screen extends AppCompatActivity implements AdapterView.OnItem
         // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
-        currencySelect.setAdapter(adapter);
-        currencySelect.setOnItemSelectedListener(this);
+        currencySelectO.setAdapter(adapter);
+        currencySelectO.setOnItemSelectedListener(this);
+        currencySelectC.setAdapter(adapter);
+        currencySelectC.setOnItemSelectedListener(this);
 
     }
 
@@ -58,7 +60,7 @@ public class main_screen extends AppCompatActivity implements AdapterView.OnItem
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
     {
         Toast toast = Toast.makeText(getApplicationContext(), "Currency Selected: " +
-                String.valueOf(currencySelect.getSelectedItem()),Toast.LENGTH_SHORT);
+                String.valueOf(currencySelectO.getSelectedItem()),Toast.LENGTH_SHORT);
         toast.show();
     }
 }
